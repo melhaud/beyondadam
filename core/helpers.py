@@ -2,7 +2,7 @@ from typing import Dict
 
 from torchvision.datasets import MNIST, CIFAR10
 from torchvision import transforms
-from torch.utils.data import TensorDataset, DataLoader
+from torch.utils.data import TensorDataset, DataLoader, Dataset
 from torch.optim import Optimizer, Adam
 from optimizers import OASIS
 from models import FullyConnectedNetwork, CifarNet
@@ -108,7 +108,7 @@ def get_sweep_config(name: str) -> Dict:
     return sweep_config
 
 def get_model(model_name: str,
-              input_dim) -> torch.nn.Module:
+              input_dim) -> nn.Module:
     """Constructs a model.
 
     Args:
