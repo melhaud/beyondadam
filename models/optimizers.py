@@ -1,5 +1,8 @@
 import torch
 
+
+MANUAL_SEED = 2147483647
+
 class OASIS(torch.optim.Optimizer):
     """
     Implements the OASIS algorithm from "Doubly Adaptive Scaled Algorithm for Machine Learning Using Second-Order Information"
@@ -74,7 +77,7 @@ class OASIS(torch.optim.Optimizer):
             return
 
         if self.generator.device != params[0].device:  # hackish way of casting the generator to the right device
-            self.generator = torch.Generator(params[0].device).manual_seed(2147483647)
+            self.generator = torch.Generator(params[0].device).manual_seed(MANUAL_SEED)
 
         grads = [p.grad for p in params]
 

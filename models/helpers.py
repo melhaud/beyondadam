@@ -1,9 +1,13 @@
 from typing import Dict
 
+from torchvision.datasets import MNIST, CIFAR10
+from torchvision import transforms
+from torch.utils.data import TensorDataset, DataLoader
 from torch.optim import Optimizer, Adam
 from optimizers import OASIS
 from models import FullyConnectedNetwork, CifarNet
 
+import wandb
 
 def get_optimizer(optimizer_name: str,
                   model,
