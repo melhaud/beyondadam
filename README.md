@@ -1,5 +1,5 @@
 # Learning on MNIST
-[train and test](https://api.wandb.ai/links/beyondadam/u6nbefxr](https://api.wandb.ai/links/beyondadam/mxgx7avr)
+[train and test](https://api.wandb.ai/links/beyondadam/mxgx7avr)
 
 # Learning translation task on Opus100-en-ru
 [train](https://api.wandb.ai/links/melhaud/daw0lj3r)
